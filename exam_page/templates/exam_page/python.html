@@ -1,0 +1,24 @@
+{% extends 'exam_page/base.html' %}
+
+{% block content %}
+<section>
+     {% for question in questions%}
+     <p>{{question.question_body }}</p>
+        {% with counter=0%} 
+        {%for answer in answers if not counter.increment ==3%}      
+      <div >
+       <p>{{answer.answer_body}}</p>
+          {{counter.increment}}
+
+      </div>
+      {%endwith%}
+      {%endif%}
+      {%endfor%}      
+         {%endfor%}      
+
+       
+
+
+
+</section>
+{% endblock content %}

@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     {% if title %}
+    <title>Online Exame | {{ title}}  </title>
+     {% else %}
+     <title> Online Exame</title>
+     {% endif %}
+    <link rel="stylesheet" href="{% static 'exam_page/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'exam_page/css/main.css' %}">
+
+
+
+
+
+
+
+
+
+
+
+  </head>
+
+
+
+    <body>
+         <header> 
+                    <!-- start nave bar--> 
+
+            <ul class="nav">
+
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Online Examination System</a>
+                  </li>
+            
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'home'%}">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'register'%}">sign in</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login'%}">log in</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="{% url 'logout'%}">log out</a>
+                    </li>
+                
+              </ul>
+         <!-- end nave bar--> 
+
+         </header>
+
+        </div>
+        <section>
+                <div class="card">
+                    
+                    
+                        {%block content %}
+              
+                        {% endblock content %}
+                    
+                </div>
+        </section>
+                        
+                
+
+
+        </section>
+           
+
+      
+      <script src="{% static 'exam_page/js/bootstrap.min.js' %}" > </script>
+      <script src="{% static 'exam_page/js/jquery-3.3.1.slim.min.js' %}">  </script>
+      <script src="{% static 'exam_page/js/popper.min.js' %}">   </script>
+      <script src="{% static 'exam_page/js/font_awsomeall.min.js' %}">   </script>
+
+
+    </body>
+
+
+
+
+
+
+
+</html>

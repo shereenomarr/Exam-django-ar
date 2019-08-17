@@ -1,0 +1,22 @@
+{% extends 'exam_page/base.html' %}
+
+{% block content %}
+
+<section>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}}">
+      {{message}}
+    
+    
+    </div>
+    {%endfor%}
+    {%endif%}
+<div class="card text-white bg-info mb-3" style="left:400px; top:200px; width:400px;">
+    <div class="card-header">Take the test on your own time</div>
+    <div class="card-body">
+      <h5 class="card-title">Online Exam</h5>
+      <p class="card-text">Access your exam online for python , php or ML exam</p>
+</div>
+</section>
+{% endblock content %}
